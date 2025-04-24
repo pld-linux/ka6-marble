@@ -96,6 +96,7 @@ Cechy:
 Summary:	Data files for Marble
 Summary(pl.UTF-8):	Dane dla Marble
 Group:		X11/Applications
+Requires(post,postun):	desktop-file-utils
 Obsoletes:	ka5-%{kaname}-data < 24.12.0
 BuildArch:	noarch
 
@@ -150,6 +151,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
+
+%post data
+%update_desktop_database_post
+
+%postun data
+%update_desktop_database_postun
 
 %files
 %defattr(644,root,root,755)
