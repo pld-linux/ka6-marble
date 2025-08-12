@@ -8,7 +8,7 @@
 Summary:	marble
 Name:		ka6-%{kaname}
 Version:	25.04.3
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -42,6 +42,7 @@ BuildRequires:	kf6-knewstuff-devel >= %{kframever}
 BuildRequires:	kf6-kparts-devel >= %{kframever}
 BuildRequires:	kf6-krunner-devel >= %{kframever}
 BuildRequires:	kf6-kwallet-devel >= %{kframever}
+BuildRequires:	kp6-libplasma-devel >= 6.0.0
 BuildRequires:	libwlocate-devel
 BuildRequires:	ninja
 BuildRequires:	protobuf-devel
@@ -65,9 +66,9 @@ Features:
   article
 - You can measure distances between locations
 - It offers different thematic maps: a classroom-style topographic
-  map, a satellite view, street map, Earth at night and temperature
-  and precipitation maps. All maps include a custom map key, so it can
-  also be used as an educational tool for use in classrooms
+  map, a satellite view, street map, Earth at night and temperature and
+  precipitation maps. All maps include a custom map key, so it can also
+  be used as an educational tool for use in classrooms
 - For educational purposes you can also change date and time and watch
   how the starry sky and the twilight zone on the map change
 - Supports multiple projections: choose between a Flat Map ("Plate
@@ -84,8 +85,8 @@ Cechy:
 - można mierzyć odległości między położeniami
 - różne mapy tematyczne: mapa topograficzna w stylu szkolnym, widok
   satelitarny, mapa ulic, Ziemia nocą, mapy temperatur i opadów;
-  wszystkie mapy zawierają własny klucz, więc mogą służyć jako
-  narzędzie edukacyjne
+  wszystkie mapy zawierają własny klucz, więc mogą służyć jako narzędzie
+  edukacyjne
 - w celach edukacyjnych można zmieniać datę oraz czas i obserwować,
   jak zmienia się gwieździste niebo i strefa zmierzchu
 - obsługa wielu rzutów: wybór między płaską mapą, odwzorowaniem
