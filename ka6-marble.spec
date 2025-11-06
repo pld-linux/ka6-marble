@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		marble
 Summary:	marble
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	2ab1a0de0078134d9b4ee08aab696423
+# Source0-md5:	3b8af06a30a3e9e2b152943d045cdfd3
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -170,22 +170,22 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/marble
 %dir %{_libdir}/plugins
 %dir %{_libdir}/plugins/designer
-%attr(755,root,root) %{_libdir}/plugins/designer/LatLonEditPlugin.so
-%attr(755,root,root) %{_libdir}/plugins/designer/MarbleNavigatorPlugin.so
-%attr(755,root,root) %{_libdir}/plugins/designer/MarbleWidgetPlugin.so
-%attr(755,root,root) %{_libdir}/libmarblewidget-qt6.so.*.*
+%{_libdir}/plugins/designer/LatLonEditPlugin.so
+%{_libdir}/plugins/designer/MarbleNavigatorPlugin.so
+%{_libdir}/plugins/designer/MarbleWidgetPlugin.so
+%{_libdir}/libmarblewidget-qt6.so.*.*
 %ghost %{_libdir}/libmarblewidget-qt6.so.2?
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/krunner/plasma_runner_marble.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/libmarble_part.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/marblethumbnail.so
+%{_libdir}/qt6/plugins/kf6/krunner/plasma_runner_marble.so
+%{_libdir}/qt6/plugins/libmarble_part.so
+%{_libdir}/qt6/plugins/marblethumbnail.so
 %dir %{_libdir}/qt6/qml/org/kde/marble
 %dir %{_libdir}/qt6/qml/org/kde/marble/imageprovider
 %{_libdir}/qt6/qml/org/kde/marble/imageprovider/kde-qmlmodule.version
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/marble/imageprovider/libmarbleimageprovider.so
+%{_libdir}/qt6/qml/org/kde/marble/imageprovider/libmarbleimageprovider.so
 %{_libdir}/qt6/qml/org/kde/marble/imageprovider/marbleimageprovider.qmltypes
 %{_libdir}/qt6/qml/org/kde/marble/imageprovider/qmldir
 %{_libdir}/qt6/qml/org/kde/marble/kde-qmlmodule.version
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/marble/libmarbledeclarative.so
+%{_libdir}/qt6/qml/org/kde/marble/libmarbledeclarative.so
 %{_libdir}/qt6/qml/org/kde/marble/marbledeclarative.qmltypes
 %{_libdir}/qt6/qml/org/kde/marble/qmldir
 
