@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.3
+%define		kdeappsver	25.12.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		marble
 Summary:	marble
 Name:		ka6-%{kaname}
-Version:	25.08.3
-Release:	2
+Version:	25.12.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	3b8af06a30a3e9e2b152943d045cdfd3
+# Source0-md5:	1c458d95bed4dbc65276503a9891c69a
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -176,8 +176,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libmarblewidget-qt6.so.*.*
 %ghost %{_libdir}/libmarblewidget-qt6.so.2?
 %{_libdir}/qt6/plugins/kf6/krunner/plasma_runner_marble.so
+%{_libdir}/qt6/plugins/kf6/thumbcreator/marble_thumbnail_geojson.so
+%{_libdir}/qt6/plugins/kf6/thumbcreator/marble_thumbnail_gpx.so
+%{_libdir}/qt6/plugins/kf6/thumbcreator/marble_thumbnail_kml.so
+%{_libdir}/qt6/plugins/kf6/thumbcreator/marble_thumbnail_kmz.so
+%{_libdir}/qt6/plugins/kf6/thumbcreator/marble_thumbnail_osm.so
+%{_libdir}/qt6/plugins/kf6/thumbcreator/marble_thumbnail_shp.so
 %{_libdir}/qt6/plugins/libmarble_part.so
-%{_libdir}/qt6/plugins/marblethumbnail.so
 %dir %{_libdir}/qt6/qml/org/kde/marble
 %dir %{_libdir}/qt6/qml/org/kde/marble/imageprovider
 %{_libdir}/qt6/qml/org/kde/marble/imageprovider/kde-qmlmodule.version
@@ -192,17 +197,11 @@ rm -rf $RPM_BUILD_ROOT
 %files data -f %{kaname}.lang
 %defattr(644,root,root,755)
 %{_iconsdir}/hicolor/*x*/apps/marble.png
-%{_desktopdir}/marble_geo.desktop
 %{_desktopdir}/marble_geojson.desktop
 %{_desktopdir}/marble_gpx.desktop
 %{_desktopdir}/marble_kml.desktop
 %{_desktopdir}/marble_kmz.desktop
 %{_desktopdir}/marble_shp.desktop
-%{_desktopdir}/marble_thumbnail_kml.desktop
-%{_desktopdir}/marble_thumbnail_kmz.desktop
-%{_desktopdir}/marble_thumbnail_osm.desktop
-%{_desktopdir}/marble_thumbnail_shp.desktop
-%{_desktopdir}/marble_worldwind.desktop
 %{_desktopdir}/org.kde.marble.behaim.desktop
 %{_desktopdir}/org.kde.marble.desktop
 %{_desktopdir}/org.kde.marble.maps.desktop
