@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.12.1
+%define		kdeappsver	25.12.2
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		marble
 Summary:	marble
 Name:		ka6-%{kaname}
-Version:	25.12.1
-Release:	2
+Version:	25.12.2
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	467c935f9539bb9ecb6105c9ca9014cd
+# Source0-md5:	2c1e51b7696155cead472e871a0b9582
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel
 BuildRequires:	Qt6Core-devel >= %{qtver}
